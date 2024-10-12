@@ -2,15 +2,19 @@
 #define	_P_UART_H
 #include "peripherals/base.h"
 
-//for easy reading
-#define UARTBASE (0x201000 + PBASE)
+#include "peripherals/base.h"
 
-//define needed UART registers
-#define UARTIBRD		(UARTBASE+0x24)
-#define UARTDR			(UARTBASE+0x0)
-#define UARTFBRD		(UARTBASE+0x28)
-#define UARTFR			(UARTBASE+0x18)
-#define UARTLCRLCRH 	(UARTBASE+0x2C)
-#define UARTCR			(UARTBASE+0x30)
+#define AUX_ENABLES     (PBASE+0x00215004)
+#define AUX_MU_IO_REG   (PBASE+0x00215040)
+#define AUX_MU_IER_REG  (PBASE+0x00215044)
+#define AUX_MU_IIR_REG  (PBASE+0x00215048)
+#define AUX_MU_LCR_REG  (PBASE+0x0021504C)
+#define AUX_MU_MCR_REG  (PBASE+0x00215050)
+#define AUX_MU_LSR_REG  (PBASE+0x00215054)
+#define AUX_MU_MSR_REG  (PBASE+0x00215058)
+#define AUX_MU_SCRATCH  (PBASE+0x0021505C)
+#define AUX_MU_CNTL_REG (PBASE+0x00215060)
+#define AUX_MU_STAT_REG (PBASE+0x00215064)
+#define AUX_MU_BAUD_REG (PBASE+0x00215068)
 
 #endif  /*_P_UART_H */
